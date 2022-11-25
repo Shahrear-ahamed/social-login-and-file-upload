@@ -29,6 +29,7 @@ userSchema.methods.generateToken = function () {
     process.env.JWT_SECRET_KEY,
     { expiresIn: "7d" }
   );
+  return jwtToken;
 };
 
 const users = model("User", userSchema);
